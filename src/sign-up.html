@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+        //= html/_head.html
+        <title>Sign up</title>
+
+        <!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="AD GEYSER" />
+		<meta property="og:description" content="Sign up" />
+		<meta property="og:url" content="http://www.ad-geyser.com/sign-up" />
+		<meta property="og:image" content="http://www.ad-geyser.com/img/logo.jpg" />
+		<!-- Open Graph end -->
+    </head>
+
+	<body class="grid grid-base">
+
+		//= html/_header.html
+
+		<main class="form-page grid grid-columns">
+			<form id="sign-up-form">
+				<fieldset>
+					<div class="form-head">
+						<h1>Sign up</h1>
+					</div>
+
+					<div class="form-body">
+						<input type="text" name="name" id="name" class="form-control" required>
+						<input type="email" name="email" id="email" class="form-control" required>
+						<input type="text" name="pswd" id="pswd" class="form-control" required>
+						<input type="text" name="conf_pswd" id="conf_pswd" class="form-control" required>
+						<input type="text" name="messenger" id="messenger" class="form-control" required>
+						<input type="text" name="website" id="website" class="form-control" required>
+						<div class="input-group">
+							<label>
+								<input type="radio" name="terms" id="terms" class="form-control" required>
+								<span>I have read and accepted the </span>
+							</label>
+							<p><a href="/terms.html">Terms and Conditions</a></p>
+				       </div>
+				    </div>
+
+				    <button type="submit" class="btn">Join Ad Geyser</button>
+
+				    <div class="form-footer">
+				    	<a href="https://account.ad-geyser.com/password">Forgot password</a>
+				    	<a href="https://account.ad-geyser.com/auth">Log in</a>
+				    </div>
+				</fieldset>
+			</form>
+		</main>
+
+
+		//= html/_footer.html
+        //= html/_scripts.html
+	</body>
+</html>

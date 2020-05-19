@@ -1,0 +1,31 @@
+// Главная
+
+// end Главная
+
+// Privacy Policy
+.terms-page {
+	padding-top: 55px;
+	padding-bottom: 45px;
+	.box-content {
+		grid-column: col-start 2 /span 10;
+	}
+}
+// end Privacy Policy
+
+@media (max-width: 991px) {
+	.terms-page {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		.box-content {
+			grid-column: col-start 1 /span 2;
+		}
+	}
+}
+
+@media(max-width:1199px){
+
+}
+
+@media(max-width:1460px){
+
+}
