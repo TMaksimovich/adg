@@ -2,7 +2,7 @@
 
 // end Главная
 
-// Privacy Policy
+// Страницы соглашений
 .terms-page {
 	padding-top: 55px;
 	padding-bottom: 45px;
@@ -10,7 +10,13 @@
 		grid-column: col-start 2 /span 10;
 	}
 }
-// end Privacy Policy
+// end Страницы соглашений
+
+// Формы
+.form-page {
+	padding: 90px 0 107px;
+}
+// end Формы
 
 @media (max-width: 991px) {
 	.terms-page {
@@ -19,6 +25,10 @@
 		.box-content {
 			grid-column: col-start 1 /span 2;
 		}
+	}
+	.form-page {
+		padding-top: 40px;
+		padding-bottom: 40px;
 	}
 }
 

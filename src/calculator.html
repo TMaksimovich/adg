@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+        //= html/_head.html
+        <title>Revenue calculator</title>
+
+        <!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="AD GEYSER" />
+		<meta property="og:description" content="Revenue calculator" />
+		<meta property="og:url" content="http://www.ad-geyser.com/calculator" />
+		<meta property="og:image" content="http://www.ad-geyser.com/img/logo.jpg" />
+		<!-- Open Graph end -->
+    </head>
+
+	<body class="grid grid-base">
+
+		//= html/_header.html
+
+		<main class="form-page grid grid-columns">
+			<div class="info-column">
+				<h1>Grow revenue with Ad Geyser</h1>
+				<ul>
+					<li>Affiliate program for Android App, Games, Music download Websites</li>
+					<li>Explore the best way of monetization with our platform</li>
+					<li>DIRECT high performance ad formats and HIGH CONVERSION</li>
+					<li>Try out revenue calculator and share your expectations with an account manager</li>
+				</ul>
+				<a href="sign-up.html" class="btn">Register for free</a>
+			</div>
+
+
+			<form id="calculator-form" class="calculator-form">
+				<div class="form-head">
+					<h2>Revenue calculator</h2>
+				</div>
+
+				<div class="form-body">
+					<div class="input-group">
+						<div class="name-field">
+							<p>Category:</p>
+						</div>
+						<div class="box-field">
+							<label class="label-radio">
+								<input type="radio" name="category" checked/>
+								<span>Apps & Games</span>
+							</label>
+
+							<label class="label-radio">
+								<input type="radio" name="category"/>
+								<span>Music</span>
+							</label>
+
+							<label class="label-radio">
+								<input type="radio" name="category"/>
+								<span>Other</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="input-group">
+						<div class="name-field">
+							<p>Ad Format:</p>
+						</div>
+						<div class="box-field">
+							<label class="label-radio">
+								<input type="radio" name="format"/>
+								<span>Banner</span>
+							</label>
+
+							<label class="label-radio">
+								<input type="radio" name="format" checked/>
+								<span>Pop up</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="input-group">
+						<div class="name-field">
+							<p>Daily users by GEOs:</p>
+						</div>
+
+						<div class="box-field box-field-half">
+							<select name="sources" id="sources" class="custom-select sources" placeholder="Choose country">
+								<option value="United states" selected>United states</option>
+								<option value="Italy">Italy</option>
+								<option value="Norway">Norway</option>
+								<option value="Sweden">Sweden</option>
+							</select>
+
+							<input type="text" name="users" id="users" class="form-control" placeholder="Daily users">
+						</div>
+
+						<button class="btn-add-fields">+ add country</button>
+					</div>
+			    </div>
+
+			    <button type="submit" class="btn btn--blue">Calculate</button>
+
+			    <div class="form-footer form-footer-border">
+			    	<p>Average daily income:</p>
+			    	<p class="cost">50 $</p>
+			    </div>
+			</form>
+		</main>
+
+
+		//= html/_footer.html
+        //= html/_scripts.html
+	</body>
+</html>

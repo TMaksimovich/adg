@@ -1,0 +1,125 @@
+.sign-up-form {
+	grid-column: col-start 1 / span 12;
+	width: 375px;
+	justify-self: center;
+	#website {
+		margin-bottom: 22px;
+	}
+	#terms {
+		vertical-align: middle;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	button {
+		margin: auto;
+    	display: block;
+	}
+}
+
+form {
+	background: #FFFFFF;
+	box-shadow: 0px 0px 50px rgba(41, 71, 150, 0.3);
+	border-radius: 9px;
+}
+.form-head {
+	background-color: $main-color;
+	color: #fff;
+	border-radius: 9px 9px 0 0;
+	padding: 16px 29px;
+	h1,
+	h2,
+	h3,
+	p {
+		margin: 0;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 28px;
+		color: inherit;
+		text-align: left;
+	}
+}
+.form-body {
+	padding: 45px 29px 30px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+	border-bottom: 1px solid #696969;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	padding: 7px 10px 7px 0;
+	font-size: 16px;
+	line-height: 19px;
+	color: #696969;
+	font-weight: 400;
+	outline: none;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.terms-field {
+	font-size: 14px;
+	line-height: 16px;
+	text-align: right;
+	color: #383838;
+}
+.form-footer {
+	font-size: 16px;
+	line-height: 19px;
+	color: $main-color;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	padding: 30px 29px;
+}
+
+.label-radio {
+	display: flex;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	span {
+		display: flex;
+		align-items: center;
+		padding: 0.375em 0.75em 0.375em 0.375em;
+		border-radius: 99em;
+		transition: 0.25s ease;
+		&:before {
+			display: flex;
+			flex-shrink: 0;
+			content: "";
+			background-color: #fff;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			margin-right: 0.375em;
+			transition: 0.25s ease;
+			box-shadow: inset 0 0 0 50px #fff;
+			border: 1px solid #696969;
+		}
+	}
+}
+input[type="radio"] {
+	position: absolute;
+	left: -9999px;
+	&:checked + span:before {
+		background-color: $main-color;
+		box-shadow: inset 0 0 0 3px #fff;
+	}
+}
+
+@media (max-width: 520px) {
+	.sign-up-form {
+		width: 100%;
+	}
+}
+
+@media (max-width: 991px) {
+	.sign-up-form {
+		grid-column: col-start 1 / span 2;
+	}
+}
+
+

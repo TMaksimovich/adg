@@ -19,35 +19,37 @@
 		//= html/_header.html
 
 		<main class="form-page grid grid-columns">
-			<form id="sign-up-form">
-				<fieldset>
-					<div class="form-head">
-						<h1>Sign up</h1>
-					</div>
+			<form id="sign-up-form" class="sign-up-form">
+				<div class="form-head">
+					<h1>Sign up</h1>
+				</div>
 
-					<div class="form-body">
-						<input type="text" name="name" id="name" class="form-control" required>
-						<input type="email" name="email" id="email" class="form-control" required>
-						<input type="text" name="pswd" id="pswd" class="form-control" required>
-						<input type="text" name="conf_pswd" id="conf_pswd" class="form-control" required>
-						<input type="text" name="messenger" id="messenger" class="form-control" required>
-						<input type="text" name="website" id="website" class="form-control" required>
-						<div class="input-group">
-							<label>
-								<input type="radio" name="terms" id="terms" class="form-control" required>
-								<span>I have read and accepted the </span>
-							</label>
-							<p><a href="/terms.html">Terms and Conditions</a></p>
-				       </div>
-				    </div>
+				<div class="form-body">
+					<input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
 
-				    <button type="submit" class="btn">Join Ad Geyser</button>
+					<input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
 
-				    <div class="form-footer">
-				    	<a href="https://account.ad-geyser.com/password">Forgot password</a>
-				    	<a href="https://account.ad-geyser.com/auth">Log in</a>
-				    </div>
-				</fieldset>
+					<input type="password" name="pswd" id="pswd" class="form-control" placeholder="Password" required>
+
+					<input type="text" name="messenger" id="messenger" class="form-control" placeholder="Select messenger" required>
+
+					<input type="text" name="website" id="website" class="form-control" placeholder="Your website or traffic source" required>
+
+					<div class="input-group terms-field">
+						<label>
+							<input type="checkbox" name="terms" id="terms" class="form-control" required>
+							<span>I have read and accepted the </span>
+						</label>
+						<p><a href="/terms.html">Terms and Conditions</a></p>
+			       </div>
+			    </div>
+
+			    <button type="submit" class="btn">Join Ad Geyser</button>
+
+			    <div class="form-footer">
+			    	<a href="https://account.ad-geyser.com/password">Forgot password</a>
+			    	<a href="https://account.ad-geyser.com/auth">Log in</a>
+			    </div>
 			</form>
 		</main>
 
