@@ -18,7 +18,7 @@
 
 		//= html/_header.html
 
-		<main class="form-page grid grid-columns">
+		<main class="calculator-page grid grid-columns">
 			<div class="info-column">
 				<h1>Grow revenue with Ad Geyser</h1>
 				<ul>
@@ -81,22 +81,31 @@
 							<p>Daily users by GEOs:</p>
 						</div>
 
-						<div class="box-field box-field-half">
-							<select name="sources" id="sources" class="custom-select sources" placeholder="Choose country">
-								<option value="United states" selected>United states</option>
-								<option value="Italy">Italy</option>
-								<option value="Norway">Norway</option>
-								<option value="Sweden">Sweden</option>
-							</select>
+						<div class="box-field-half">
 
-							<input type="text" name="users" id="users" class="form-control" placeholder="Daily users">
+							<div class="box-field">
+								<select name="sources" id="sources" class="custom-select sources" placeholder="Choose country">
+									<option value="United states" selected>United states</option>
+									<option value="Italy">Italy</option>
+									<option value="Norway">Norway</option>
+									<option value="Sweden">Sweden</option>
+								</select>
+
+								<div class="group">
+									<input type="text" name="users" id="users" class="form-control">
+									<label>Daily users</label>
+								</div>
+							</div>
+
+							<button class="btn-add-fields">+ add country</button>
+
 						</div>
-
-						<button class="btn-add-fields">+ add country</button>
 					</div>
 			    </div>
 
-			    <button type="submit" class="btn btn--blue">Calculate</button>
+			    <div class="form-btn-box">
+			    	<button type="submit" class="btn btn--blue">Calculate</button>
+			    </div>
 
 			    <div class="form-footer form-footer-border">
 			    	<p>Average daily income:</p>

@@ -18,6 +18,28 @@
 }
 // end Формы
 
+// Калькулятор
+.calculator-page {
+	padding: 95px 0 107px;
+}
+.info-column {
+	grid-column: col-start 2 /span 4;
+	h1 {
+		text-align: left;
+		margin-top: 5px;
+		margin-bottom: 0;
+	}
+	.btn {
+		margin: auto;
+		display: block;
+		width: 182px;
+	}
+}
+.calculator-form {
+	grid-column: col-start 7 /span 5;
+}
+// end Калькулятор
+
 @media (max-width: 991px) {
 	.terms-page {
 		padding-top: 20px;
@@ -26,14 +48,31 @@
 			grid-column: col-start 1 /span 2;
 		}
 	}
-	.form-page {
+	.form-page,
+	.calculator-page {
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
+	.info-column,
+	.calculator-form {
+		grid-column: col-start 1 /span 2;
+	}
+	.info-column {
+		margin-bottom: 70px;
+	}
+	.calculator-form {
+		justify-self: center;
+	}
 }
 
-@media(max-width:1199px){
 
+@media(max-width:1260px){
+	.info-column {
+		grid-column: col-start 1 /span 5;
+	}
+	.calculator-form {
+		grid-column: col-start 6 /span 7;
+	}
 }
 
 @media(max-width:1460px){

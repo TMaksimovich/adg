@@ -2,9 +2,6 @@
 	grid-column: col-start 1 / span 12;
 	width: 375px;
 	justify-self: center;
-	#website {
-		margin-bottom: 22px;
-	}
 	#terms {
 		vertical-align: middle;
 	}
@@ -59,6 +56,36 @@ input[type="password"] {
 	width: 100%;
 	margin-bottom: 30px;
 }
+.group {
+	position: relative;
+	margin-bottom: 25px;
+	input {
+		margin-bottom: 0;
+	}
+	label {
+		position: absolute;
+		font-size: 16px;
+		line-height: 19px;
+		color: #696969;
+		font-weight: 400;
+		pointer-events: none;
+		left: 0;
+		bottom: 7px;
+		width: 100%;
+		transform: translate3d(0, 5px, 0) scale(1);
+		transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
+		transform-origin: left top;
+	}
+	input.used ~ label,
+	textarea.used ~ label {
+		transform: translate3d(0, -20px, 0) scale(0.75);
+		display: block;
+	}
+	input:focus ~ label,
+	textarea:focus ~ label {
+		transform: translate3d(0, -20px, 0) scale(0.75);
+	}
+}
 .terms-field {
 	font-size: 14px;
 	line-height: 16px;
@@ -74,16 +101,26 @@ input[type="password"] {
 	justify-content: space-around;
 	padding: 30px 29px;
 }
+.form-footer-border {
+	border-top: 1px solid rgba(105, 105, 105, 0.2);
+	margin: 0 10px;
+}
 
 .label-radio {
 	display: flex;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
+	margin-right: 25px;
+	font-size: 14px;
+	line-height: 16px;
+	color: #696969;
+	&:last-child {
+		margin-right: 0;
+	}
 	span {
 		display: flex;
 		align-items: center;
-		padding: 0.375em 0.75em 0.375em 0.375em;
 		border-radius: 99em;
 		transition: 0.25s ease;
 		&:before {
@@ -110,9 +147,177 @@ input[type="radio"] {
 	}
 }
 
+.calculator-form {
+	max-width: 488px;
+	.form-body {
+		padding-bottom: 25px;
+	}
+	.form-footer {
+		color: #383838;
+		justify-content: space-between;
+		padding-top: 20px;
+		align-items: center;
+		p {
+			margin-bottom: 0;
+		}
+		.cost {
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 28px;
+			color: $main-color;
+		}
+	}
+	.input-group {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.name-field {
+		font-size: 16px;
+		line-height: 19px;
+		color: #383838;
+		width: 33%;
+		padding-right: 45px;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.box-field {
+		display: flex;
+	}
+	.btn-add-fields {
+		color: #383838;
+		border: none;
+		background-color: transparent;
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 14px;
+		text-align: left;
+		padding: 0;
+		outline: none;
+	}
+	.box-field-half {
+		width: 66.6%;
+		select,
+		input,
+		label,
+		.custom-select-wrapper {
+			font-size: 14px;
+			line-height: 16px;
+		}
+		.custom-select-wrapper {
+			margin-right: 28px;
+			width: 55%;
+			margin-top: 16px;
+		}
+		.group {
+			width: 45%;
+			margin-left: 28px;
+		}
+	}
+	.form-btn-box {
+		display: flex;
+		justify-content: flex-end;
+		padding: 0 29px 30px;
+	}
+}
+.custom-select-trigger {
+	font-size: 14px;
+	line-height: 16px;
+	color: #696969;
+	border-bottom: 1px solid #696969;
+	display: block;
+	padding-right: 20px;
+	position: relative;
+	cursor: pointer;
+	&:after {
+		content: '';
+		width: 0;
+		height: 0;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		border-style: solid;
+		border-width: 5px 3px;
+		border-color: #696969 transparent transparent transparent;
+	}
+}
+.custom-options {
+	display: none;
+	position: absolute;
+	top: 15px;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 10;
+	box-shadow: 0px 0px 25px rgba(41, 71, 150, .1);
+	padding: 20px;
+	border-radius: 9px;
+	margin-top: 10px;
+	li {
+		margin-bottom: 10px;
+		padding-left: 0;
+		color: #696969;
+		cursor: pointer;
+		&:before {
+			display: none;
+		}
+	}
+}
+.custom-select {
+	position: relative;
+	&.opened {
+		.custom-options {
+			display: block;
+		}
+	}
+}
+
+
 @media (max-width: 520px) {
 	.sign-up-form {
 		width: 100%;
+	}
+}
+
+@media (max-width: 560px) {
+	.calculator-form {
+		.form-footer {
+			padding: 20px 0 30px;
+		}
+		.name-field {
+			width: 100%;
+			padding-right: 0;
+			margin-bottom: 15px;
+		}
+		.box-field {
+			flex-wrap: wrap;
+		}
+		.label-radio {
+			margin-bottom: 10px;
+		}
+		.box-field-half {
+			width: 100%;
+			.custom-select-wrapper {
+				width: 100%;
+				margin-right: 0;
+				margin-top: 0;
+				margin-bottom: 30px;
+			}
+			.group {
+				width: 100%;
+				margin-left: 0;
+			}
+			.box-field {
+				margin-bottom: 20px;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
 	}
 }
 
