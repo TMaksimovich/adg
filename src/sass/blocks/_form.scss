@@ -276,6 +276,27 @@ input[type="radio"] {
 	}
 }
 
+.contact-form {
+	width: 488px;
+	padding: 44px 7px;
+	display: flex;
+    flex-direction: column;
+	p {
+		padding: 0 26px;
+		margin-bottom: 0;
+	}
+	.form-body {
+		padding-top: 30px;
+	}
+	.group label {
+		bottom: 11px;
+	}
+	.btn {
+		align-self: flex-end;
+		margin-right: 26px;
+	}
+}
+
 
 @media (max-width: 520px) {
 	.sign-up-form {

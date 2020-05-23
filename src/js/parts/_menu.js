@@ -6,11 +6,13 @@
 		$(this).closest("header").find(".main-menu").toggleClass("main-menu--open");
 	});
 
-	// header menu
-	$(".page-menu-toggle").click(function() {
-		$(".page-menu-toggle").removeClass("page-menu-toggle--active");
-		$(".page-menu-list-child").removeClass("page-menu-list-child--open");
-		$(this).toggleClass("page-menu-toggle--active");
-		$(this).closest(".page-menu-item").find(".page-menu-list-child").toggleClass("page-menu-list-child--open");
+	//плавный скролл к якорю
+	$('a[href^="#"]').click(function(){
+		$('.menu-link').removeClass("active");
+        var el = $(this).attr('href');
+        $(this).addClass("active");
+        $('body, html').animate({
+            scrollTop: $(el).offset().top - ($('header').height() + 40)}, 2000);
+        return false;
 	});
 }(jQuery));
