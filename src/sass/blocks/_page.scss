@@ -7,16 +7,6 @@
 	width: 100%;
 	height: 756px;
 	background: linear-gradient(179.4deg, #004595 30.44%, #000d4f 85.79%);
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: -9px;
-		right: -400px;
-		width: 150%;
-		height: 327px;
-		background: url(../img/wave-slider.svg) 0 center no-repeat;
-		background-size: cover;
-	}
 }
 .promo-slider {
 	height: 650px;
@@ -44,18 +34,50 @@
 .promo-item-img {
 	width: 41.6%;
 	align-self: center;
-	margin-top: 216px;
-	img {
-		height: 500px;
+}
+.promo-item--1 {
+	.promo-item-img {
+		margin-top: 216px;
+		img {
+			height: 500px;
+		}
+	}
+}
+.promo-item--2 {
+	.promo-item-img {
+		margin-top: 181px;
+		img {
+			height: 552px;
+		}
+	}
+}
+.promo-item--3 {
+	.promo-item-img {
+		margin-top: 150px;
+		padding-left: 57px;
+		img {
+			height: 525px;
+		}
 	}
 }
 
 .how-work {
 	background-color: #F7F7F7;
 	height: 675px;
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		top: -290px;
+		right: -400px;
+		width: 150%;
+		height: 327px;
+		background: url(../img/wave-slider.svg) 0 center no-repeat;
+		background-size: cover;
+	}
 }
 .how-work-desc {
-	grid-column: col-start 2 /span 3;
+	grid-column: col-start 3 /span 3;
 	align-self: center;
 	text-align: center;
 	h3 {
@@ -67,7 +89,7 @@
 	}
 }
 .how-work-box {
-	grid-column: col-start 6 /span 5;
+	grid-column: col-start 7 /span 5;
 	position: relative;
 	margin-top: 75px;
 }
@@ -155,11 +177,11 @@
 		content: '';
 		position: absolute;
 		top: -190px;
-    	left: -993px;
-		width: 3000px;
 		height: 379px;
 		background: url(../img/wave-bottom.png) 0 bottom no-repeat;
 		background-size: cover;
+		width: 200%;
+		right: -20%;
 	}
 	h3 {
 		color: inherit;
@@ -186,6 +208,7 @@
 	margin-bottom: 165px;
 	position: relative;
 	padding-left: 125px;
+	align-self: center;
 	&:before {
 		top: 0;
 		bottom: 0;
@@ -243,7 +266,8 @@
 	justify-content: space-around;
 }
 .advantages-item {
-	width: 410px;
+	max-width: 410px;
+	flex-basis: 50%;
 	min-height: 124px;
 	position: relative;
 	background-color: #FFFFFF;
@@ -346,12 +370,12 @@
 	padding-top: 27px;
 	padding-bottom: 96px;
 	h3 {
-		grid-column: col-start 2 / span 4;
+		grid-column: col-start 2 / span 3;
 		text-align: left;
 		margin-top: 0;
 	}
 	.about-desc {
-		grid-column: col-start 6 / span 6;
+		grid-column: col-start 5 / span 7;
 	}
 	p {
 		margin-bottom: 30px;
@@ -407,7 +431,239 @@
 }
 // end Калькулятор
 
+@media (max-width: 480px) {
+	.monetize:before {
+		left: 0;
+		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.promo-item {
+		flex-wrap: wrap;
+	}
+	.front-page {
+		h3 {
+			font-size: 35px;
+			line-height: 1.4;
+		}
+	}
+	.promo-item-desc {
+	    width: 100%;
+	    padding-top: 100px;
+	    h1,
+	    h2 {
+			font-size: 30px;
+	    }
+	}
+	.promo-item-img {
+		width: 100%;
+	}
+	.promo-item--1 .promo-item-img img {
+		height: 245px;
+		width: 270px;
+	}
+	.promo-item--2 .promo-item-img img {
+		height: 310px;
+		width: 285px;
+	}
+	.promo-item--3 .promo-item-img img {
+		height: 303px;
+		width: 208px;
+	}
+	.promo-item--1 .promo-item-img,
+	.promo-item--2 .promo-item-img {
+	    margin-top: 0;
+	    img {
+			margin: auto;
+	    }
+	}
+	.promo-item--2 .promo-item-img,
+	.promo-item--3 .promo-item-img {
+		margin-top: 30px;
+	}
+	.promo-item--3 .promo-item-img {
+	    padding-left: 0;
+	    img {
+			margin: auto;
+	    }
+	}
+	.user-friendly,
+	.how-work {
+		grid-template-columns: [main-start] 10px repeat(2, [col-start] minmax(auto, 1fr)) [main-end] 10px;
+
+	}
+	.how-work {
+		height: auto;
+		padding-bottom: 30px;
+		&:after {
+			top: -251px;
+			left: -222px;
+			width: 200%;
+			height: 258px;
+		}
+	}
+	.how-work-box,
+	.user-friendly h3,
+	.user-friendly-img,
+	.faq-column,
+	.form-column {
+		grid-column: col-start 1 /span 2;
+	}
+
+	.how-work-desc {
+		margin-top: 0;
+	}
+	.how-work-box {
+		margin-top: 75px;
+	}
+	.how-work-item {
+		position: static;
+		margin: 0 auto 20px;
+	}
+	.monetize {
+		padding-top: 130px;
+		&:before {
+			top: 0;
+			// left: -300px;
+			// width: 200%;
+			height: 100px;
+		}
+		h3 {
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+	.monetize-steps {
+		margin-top: 0;
+	}
+	.monetize-item {
+		width: 100%;
+		margin-bottom: 65px;
+		padding-right: 0;
+		min-height: 78px;
+		display: flex;
+		align-items: center;
+	}
+	.advantages-item {
+		width: 100%;
+	}
+	.user-friendly {
+		h3 {
+			text-align: center;
+		}
+		svg {
+			width: 100%;
+			height: auto;
+		}
+		img {
+			width: 95%;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	.statistic-box {
+		flex-direction: column;
+		align-items: center;
+	}
+	.statistic-column {
+		margin-bottom: 50px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		p {
+			margin-top: 5px;
+		}
+	}
+	.faq-column {
+		padding-right: 0;
+		margin-bottom: 40px;
+	}
+	.about h3 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+
 @media (max-width: 991px) {
+	.monetize:before {
+		// left: -550px;
+		// width: 1200px;
+		right: 0;
+		width: 200%;
+	}
+}
+
+@media (max-width: 991px) {
+	.promo-item-desc {
+		width: 50%;
+	    margin-left: 0;
+	    padding-left: 20px;
+	    h1,
+	    h2 {
+			margin-bottom: 40px;
+			line-height: 1.4;
+	    }
+	}
+	.promo-item--1 .promo-item-img,
+	.promo-item--2 .promo-item-img {
+		margin-top: 0;
+	}
+	.promo-item--1 .promo-item-img img,
+	.promo-item--2 .promo-item-img img {
+		height: auto;
+		width: 100%;
+		margin-left: 0;
+	}
+	.promo-item--3 .promo-item-img {
+		padding-left: 0;
+		margin-top: 50px;
+		img {
+			margin-left: 0;
+		}
+	}
+	.how-work,
+	.user-friendly {
+		grid-template-columns: [main-start] 10px repeat(6, [col-start] minmax(auto, 1fr)) [main-end] 10px;
+	}
+	.how-work:after {
+		left: 0;
+	}
+	.how-work-desc,
+	.monetize h3,
+	.monetize-steps,
+	.advantages h3,
+	.advantages-box,
+	.advantages .btn,
+	.statistic-box,
+	.faq h3,
+	.about h3,
+	.about .about-desc {
+		grid-column: col-start 1 /span 2;
+	}
+	.user-friendly h3 {
+		grid-column: col-start 1 /span 3;
+	}
+	.how-work-box {
+		grid-column: col-start 3 /span 2;
+	}
+	.user-friendly-img {
+		grid-column: col-start 5 /span 3;
+	}
+	.user-friendly {
+		padding-top: 0;
+		h3 {
+			padding-right: 20px;
+		}
+	}
+	.faq-column {
+		grid-column: col-start 1 /span 1;
+		padding-right: 0;
+	}
+	.form-column {
+		grid-column: col-start 2 /span 1;
+	}
+
 	.terms-page {
 		padding-top: 20px;
 		padding-bottom: 20px;
@@ -432,6 +688,39 @@
 	}
 }
 
+@media(max-width:1199px){
+	.advantages-box {
+		grid-column: col-start 2 /span 10;
+	}
+	.advantages-item {
+		width: 44%;
+		padding-left: 70px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-bottom: 30px;
+	}
+	.advantages-number {
+		width: 80px;
+		height: 80px;
+		font-size: 45px;
+		left: -20px;
+		top: -30px;
+	}
+	.advantages-item p {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.advantages .btn {
+		margin-top: 30px;
+	}
+	.promo-item--3 .promo-item-img {
+		margin-top: 0;
+		img {
+			height: 400px;
+		}
+	}
+
+}
 
 @media(max-width:1260px){
 	.info-column {
@@ -440,11 +729,83 @@
 	.calculator-form {
 		grid-column: col-start 6 /span 7;
 	}
+	.promo-item-desc {
+		width: 50%;
+		margin-left: 11%;
+	}
+	.promo-item--1 .promo-item-img {
+		margin-top: 10px;
+		img {
+			margin-left: -40px;
+		}
+	}
+	.promo-item--2 .promo-item-img {
+		margin-top: 201px;
+		img {
+			margin-left: -80px;
+		}
+	}
+	.promo-item--3 .promo-item-img {
+		padding-left: 0;
+	}
+	.promo-item--1 .promo-item-img,
+	.promo-item--2 .promo-item-img {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.promo-item--3 .promo-item-img {
+		img {
+			width: 100%;
+			height: 600px;
+			object-fit: contain;
+			margin-left: -80px;
+		}
+	}
+	.monetize:before {
+		top: 0;
+		width: 200%;
+		right: 0;
+		height: 200px;
+	}
+	.user-friendly h3 {
+		grid-column: col-start 2 /span 5;
+	}
+	.user-friendly-img {
+		grid-column: col-start 9 /span 5;
+	}
+}
+
+@media(max-width:1600px){
+	.advantages-box {
+		grid-column: col-start 2 /span 10;
+	}
+}
+
+@media(max-width:1479px){
+	.promo-item-desc {
+	    width: 44%;
+	}
+	.promo-item--1 .promo-item-img img,
+	.promo-item--2 .promo-item-img img {
+		margin-left: -80px;
+	}
+	.how-work-desc {
+		grid-column: col-start 2 /span 4;
+	}
+	.how-work-box {
+		grid-column: col-start 6 /span 5;
+	}
 }
 
 @media(max-width:1700px){
+	.monetize h3 {
+		grid-column: col-start 2 / span 10;
+	}
 	.monetize-steps {
 		justify-content: flex-start;
+		grid-column: col-start 2 / span 10;
 	}
 	.monetize-item {
 		width: 50%;

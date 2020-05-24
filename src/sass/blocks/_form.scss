@@ -277,7 +277,8 @@ input[type="radio"] {
 }
 
 .contact-form {
-	width: 488px;
+	width: 100%;
+	max-width: 488px;
 	padding: 44px 7px;
 	display: flex;
     flex-direction: column;
@@ -301,6 +302,10 @@ input[type="radio"] {
 @media (max-width: 520px) {
 	.sign-up-form {
 		width: 100%;
+	}
+	.contact-form .btn {
+		margin-right: 0;
+		align-self: center;
 	}
 }
 
@@ -345,6 +350,16 @@ input[type="radio"] {
 @media (max-width: 991px) {
 	.sign-up-form {
 		grid-column: col-start 1 / span 2;
+	}
+	.contact-form {
+		width: 100%;
+		margin: auto;
+	}
+}
+
+@media (min-width: 1860px) {
+	.contact-form {
+		max-width: 600px;
 	}
 }
 

@@ -111,6 +111,7 @@
     font-size: 0;
     display: block;
     outline: none;
+    z-index: 10;
 }
 .slick-prev {
     left: 80px;
@@ -148,6 +149,15 @@
     }
     .slick-active button {
         opacity: 1;
+    }
+}
+
+@media (max-width: 991px) {
+    .slick-prev {
+        left: 20px;
+    }
+    .slick-next {
+        right: 20px;
     }
 }
 
