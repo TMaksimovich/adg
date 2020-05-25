@@ -9,6 +9,9 @@
 	//плавный скролл к якорю
 	$('a[href^="#"]').click(function(){
 		$('.menu-link').removeClass("active");
+		$('.toggle-menu').removeClass("toogle-menu--active");
+		$('.main-menu').removeClass("main-menu--open");
+
         var el = $(this).attr('href');
         $(this).addClass("active");
         $('body, html').animate({
