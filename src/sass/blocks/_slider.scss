@@ -105,13 +105,14 @@
     border: none;
     background-color: transparent;
     width: 9px;
-    height: 14px;
+    height: 9px;
     border-top: 2px solid #fff;
     border-right: 2px solid #fff;
     font-size: 0;
     display: block;
     outline: none;
     z-index: 10;
+    padding: 7px;
 }
 .slick-prev {
     left: 80px;

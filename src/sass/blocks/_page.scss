@@ -439,10 +439,16 @@
 	.promo {
     	background-position: 25% 102%;
     	background-size: 150%, cover;
-    	height: 565px;
+    	height: 593px;
     	.slick-dots {
-			bottom: 265px;
+			bottom: 299px;
 		}
+	}
+	.promo-item {
+		height: 649px;
+	}
+	.promo-slider {
+	    height: 649px;
 	}
 	.front-page {
 		h3 {
@@ -451,7 +457,7 @@
 		}
 	}
 	.promo-item-desc {
-	    padding-top: 100px;
+	    padding-top: 50px;
 	    h1,
 	    h2 {
 			font-size: 28px;
@@ -459,7 +465,7 @@
 	}
 	.promo-item--2 {
 		.promo-item-desc {
-			padding-top: 85px;
+			padding-top: 50px;
 		}
 	}
 	.promo-item--1 .promo-item-img img {
@@ -482,7 +488,7 @@
 	    }
 	}
 	.promo-item--2 .promo-item-img {
-		margin-top: 30px;
+		margin-top: 7px;
 	}
 	.promo-item--3 .promo-item-img {
 	    padding-left: 0;
@@ -500,6 +506,7 @@
 		height: auto;
 		width: 100%;
 		padding-bottom: 30px;
+		padding-top: 50px;
 	}
 	.how-work-box,
 	.how-work-desc,
@@ -607,7 +614,11 @@
 			bottom: 243px;
 		}
 	}
+	.promo-slider {
+	    height: 756px;
+	}
 	.promo-item {
+		height: 749px;
 		flex-wrap: wrap;
 	}
 	.promo-item-desc {
@@ -954,5 +965,8 @@
 	.promo-item-desc h2 {
 		font-size: 65px;
 		line-height: 80px;
+	}
+	.advantages-box {
+		width: 1000px;
 	}
 }

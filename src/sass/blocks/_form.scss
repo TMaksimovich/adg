@@ -39,6 +39,12 @@ form {
 .form-body {
 	padding: 45px 29px 30px;
 }
+input:not([type="radio"]):not([type="checkbox"]),
+textarea {
+	-webkit-appearance: none;
+	border-radius: 0;
+	-webkit-border-radius: 0px;
+}
 input[type="text"],
 input[type="email"],
 input[type="tel"],
