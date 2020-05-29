@@ -48,7 +48,8 @@ textarea {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-input[type="password"] {
+input[type="password"],
+.custom-combobox-input {
 	border-bottom: 1px solid #696969;
 	border-top: none;
 	border-left: none;
@@ -209,19 +210,19 @@ input[type="radio"] {
 		width: 66.6%;
 		select,
 		input,
-		label,
-		.custom-select-wrapper {
+		label {
 			font-size: 14px;
 			line-height: 16px;
 		}
-		.custom-select-wrapper {
-			margin-right: 28px;
-			width: 55%;
-			margin-top: 16px;
+		.ui-widget-wrapper {
+			width: 45%;
 		}
 		.group {
 			width: 45%;
 			margin-left: 28px;
+			label {
+				bottom: 12px;
+			}
 		}
 	}
 	.form-btn-box {
@@ -230,14 +231,28 @@ input[type="radio"] {
 		padding: 0 29px 30px;
 	}
 }
-.custom-select-trigger {
+.custom-select {
+	display: none;
+}
+.custom-combobox {
+	display: block;
+	margin-bottom: -10px;
+	position: relative;
+}
+.custom-combobox-input {
+	padding-right: 30px;
+}
+.ui-button {
+	width: 20px;
+    height: 20px;
+    text-align: center;
 	font-size: 14px;
 	line-height: 16px;
 	color: #696969;
-	border-bottom: 1px solid #696969;
 	display: block;
-	padding-right: 20px;
-	position: relative;
+	position: absolute;
+	right: 0;
+	bottom: 38px;
 	cursor: pointer;
 	&:after {
 		content: '';
@@ -251,19 +266,19 @@ input[type="radio"] {
 		border-color: #696969 transparent transparent transparent;
 	}
 }
-.custom-options {
-	display: none;
-	position: absolute;
-	top: 15px;
-	left: 0;
-	width: 100%;
+ul.ui-widget-content {
+	width: 150px !important;
+	height: 200px;
 	background-color: #fff;
 	z-index: 10;
 	box-shadow: 0px 0px 25px rgba(41, 71, 150, .1);
 	padding: 20px;
 	border-radius: 9px;
-	margin-top: 10px;
+	margin-top: 20px;
+	overflow-y: auto;
 	li {
+		font-size: 14px;
+		line-height: 16px;
 		margin-bottom: 10px;
 		padding-left: 0;
 		color: #696969;
@@ -273,14 +288,7 @@ input[type="radio"] {
 		}
 	}
 }
-.custom-select {
-	position: relative;
-	&.opened {
-		.custom-options {
-			display: block;
-		}
-	}
-}
+
 
 .contact-form {
 	width: 100%;
@@ -333,11 +341,10 @@ input[type="radio"] {
 		}
 		.box-field-half {
 			width: 100%;
-			.custom-select-wrapper {
+			.ui-widget-wrapper {
 				width: 100%;
 				margin-right: 0;
 				margin-top: 0;
-				margin-bottom: 30px;
 			}
 			.group {
 				width: 100%;

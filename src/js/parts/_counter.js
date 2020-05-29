@@ -23,9 +23,19 @@ function scrollTracking(){
 }
 
 $(window).scroll(function(){
-	scrollTracking();
+	if (el.length === 0)  {
+		return;
+	}
+	else {
+		scrollTracking();
+	}
 });
 
 $(document).ready(function(){
-	scrollTracking();
+	if (el.length === 0)  {
+		return;
+	}
+	else {
+		scrollTracking();
+	}
 });
