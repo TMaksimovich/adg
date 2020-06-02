@@ -23,7 +23,8 @@
 	padding-bottom: 5px;
 	border-bottom: 2px solid transparent;
 	color: inherit;
-	&.active {
+	&.active,
+	&:hover {
 		border-bottom-color: #fff;
 	}
 }

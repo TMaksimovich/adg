@@ -6,16 +6,49 @@
 		$(this).closest("header").find(".main-menu").toggleClass("main-menu--open");
 	});
 
-	//плавный скролл к якорю
-	$('a[href^="#"]').click(function(){
-		$('.menu-link').removeClass("active");
-		$('.toggle-menu').removeClass("toogle-menu--active");
-		$('.main-menu').removeClass("main-menu--open");
-
-        var el = $(this).attr('href');
-        $(this).addClass("active");
-        $('body, html').animate({
-            scrollTop: $(el).offset().top - ($('header').height() + 40)}, 2000);
-        return false;
-	});
 }(jQuery));
+
+
+// function setLocation(curLoc){
+// 	location.hash = curLoc;
+// }
+
+function scroll(){
+    var $sections = $('.section');
+	$sections.each(function(i,el){
+        var top  = $(el).offset().top - 400;
+        var bottom = top +$(el).height();
+        var scroll = $(window).scrollTop();
+        var id = $(el).attr('id');
+
+    	if( scroll > top && scroll < bottom){
+            $('.menu-link.active').removeClass('active');
+			$('a[href="#'+id+'"]').addClass('active');
+        }
+   //      if( scroll > $(el).offset().top && scroll < bottom){
+			// setLocation(id);
+   //      }
+    })
+}
+jQuery(window).on("scroll", scroll);
+
+$(".main-menu").on("click","a", function (event) {
+	jQuery(window).off("scroll", scroll);
+	$(".toggle-menu.toogle-menu--active").removeClass("toogle-menu--active");
+	$(this).closest("header").find(".main-menu").toggleClass("main-menu--open");
+	$('.menu-link.active').removeClass('active');
+	$(event.target).addClass('active');
+
+    // получем идентификатор блока из атрибута href
+    var id  = $(this).attr('href'),
+
+    // находим высоту, на которой расположен блок
+        top = $(id).offset().top - 100;
+
+    // анимируем переход к блоку, время: 800 мс
+    $('body,html').animate({
+    	scrollTop: top
+    }, 2000, null, function() {
+      	jQuery(window).on("scroll", scroll);
+      });
+});
